@@ -8,7 +8,6 @@ import usb from './lib/usb/usb.js';
 import cpu from './lib/cpu/cpu.js';
 import os from './lib/os/os.js';
 import chalk from 'chalk';
-import fs from 'fs';
 
 const usageText = `learncmd gets systeminformation using nodejs.
 
