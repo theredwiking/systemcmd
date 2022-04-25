@@ -10,7 +10,21 @@ import os from './lib/os/os.js';
 import chalk from 'chalk';
 import fs from 'fs';
 
-const usageText = fs.readFileSync('./lib/help.txt').toString();
+const usageText = `learncmd gets systeminformation using nodejs.
+
+  commands can be:
+
+  help:       used to display all commands
+  cpu:        used to retrieve cpu information
+  memory:     used to retrieve memory information
+  users:      used to retrieve users information
+  os:         used to retrieve OS information
+  usb:        used to retrieve USB information
+  audio:      used to retrieve audio information
+  network:    used to retrieve network information
+  wifi:       used to retrieve wifi information
+  exit:       used to exit the programpostcode
+`
 
 function commands(command) {
     switch(command) {
