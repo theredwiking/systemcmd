@@ -7,6 +7,7 @@ import wifi from './lib/wifi/wifi.js';
 import usb from './lib/usb/usb.js';
 import cpu from './lib/cpu/cpu.js';
 import os from './lib/os/os.js';
+import process from 'process';
 import chalk from 'chalk';
 
 const usageText = `learncmd gets systeminformation using nodejs.
@@ -59,3 +60,7 @@ function commands(command) {
 }
 
 aksCommand('Type in a command', 'help', answers => commands(answers.command));
+
+process.on('beforeExit', code => {
+    aksCommand('Type in a command', 'help', answers => commands(answers.command));
+});
